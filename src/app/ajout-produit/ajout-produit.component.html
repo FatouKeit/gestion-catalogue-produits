@@ -1,0 +1,28 @@
+<form>
+    <h3>Ajouter un Produit</h3>
+    <table>
+      <tr>
+        <td><label for="textRef">Référence :</label></td>
+        <td><input type="text" id="textRef" [(ngModel)]="reference" [ngModelOptions]="{standalone: true}" disabled/></td>
+      </tr>
+      <tr>
+        <td><label for="textDesc">Description :</label></td>
+        <td><input type="text" id="textDesc" [(ngModel)]="description" [ngModelOptions]="{standalone: true}" /></td>
+      </tr>
+      <tr>
+        <td><label for="textPrix">Prix Unitaire :</label></td>
+        <td><input type="text" id="textPrix" [(ngModel)]="prixUnit" [ngModelOptions]="{standalone: true}" /></td>
+      </tr>
+      <tr>
+        <td><label for="selectCat">Catégorie :</label></td>
+        <td>
+          <select id="selectCat" [(ngModel)]="categorieId" [ngModelOptions]="{standalone: true}">
+            <option value="" disabled selected>-- Categorie --</option>
+            <option *ngFor="let cat of categories" [value]="cat.idCategorie">{{ cat.nomCategorie }}</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <button type="button" (click)="ajoutProduit()">Ajouter</button>
+  </form>
+  

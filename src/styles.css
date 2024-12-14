@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+app-banner, app-footer{
+    text-align: center;
+}
+
+.conteneur {
+    width: 50%;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+.links a {
+    text-decoration: none; /* soulignement des liens */
+    margin: 0 25px;
+    font-weight: bold;
+  }
+
+.lien-acceuil{
+    color: black; 
+  }
+.lien-afficher{
+    color: green; 
+  }
+.lien-ajouter{
+    color: red; 
+  }
+  
+hr {
+    margin: 20px 0;
+    border: 1px solid silver;
+  }
+  
+.description {
+    font-size: 15px;
+    line-height: 1.5; 
+  }
+

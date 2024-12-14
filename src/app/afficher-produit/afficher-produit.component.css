@@ -1,0 +1,32 @@
+
+table {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    
+    background-color: #f9f9f9;
+    border-collapse: collapse;
+  }
+  
+  p {
+    
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    
+  }
+  
+  tr, td, th {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid silver;
+  }
+
+  select {
+    border: 2px double gray;
+    margin: 10px 0;
+    padding: 5px;
+    width: 200px;
+  }
+
+  

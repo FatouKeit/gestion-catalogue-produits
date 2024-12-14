@@ -1,0 +1,28 @@
+
+
+<div>
+    
+     Catégorie : 
+     <select id="selectCategory" [(ngModel)]="selectedCategory" (change)="filterByCategory()">
+        <option value="" disabled selected>-- Catégorie --</option>
+        <option *ngFor="let category of categories" [value]="category.idCategorie">{{ category.nomCategorie }}</option>
+      </select>
+  </div>
+
+<table>
+    
+    <p>Liste des produits</p>
+
+    <tr>
+        <th>Reference</th>
+        <th>Description</th>
+        <th>Prix Unit</th>
+    </tr>
+    
+    <tr *ngFor="let produit of produits">
+        <td>{{ produit.reference }}</td>
+        <td>{{ produit.description }}</td>
+        <td>{{ produit.prixUnit }} DH</td>
+      </tr>
+   
+</table>
