@@ -21,6 +21,7 @@ export class AfficherProduitComponent implements OnInit {
   private urlCategories = 'http://localhost:8080/categories';
 
   constructor(private client: HttpClient) {}
+  
   ngOnInit(): void {
     this.getProduits();
     this.getCategories();
@@ -52,4 +53,22 @@ export class AfficherProduitComponent implements OnInit {
   filterByCategory() {
     this.getProduits(); 
   }
+
+
+  //Supprimer Produit
+  deleteProduit(produit: Produit): void {
+    const reference = produit.reference;
+    this.client.delete(`http://localhost:8080/produits/${reference}`).subscribe({
+      next: (response) => {
+        this.produits = this.produits.filter(p => p.reference !== reference);
+        console.log('Produit supprimé');
+        // Actualisation produits
+        this.getProduits();
+      },
+      error: (error) => {
+        console.error('Erreur de suppression:', error);
+      }
+    });
+  }
+
 }
