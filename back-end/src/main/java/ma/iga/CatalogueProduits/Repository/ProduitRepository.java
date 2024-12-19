@@ -10,4 +10,6 @@ import ma.iga.CatalogueProduits.Entity.Produit;
 public interface ProduitRepository extends JpaRepository<Produit,Long>{
 
 	List<Produit> findByCategorieIdCategorie(int idCategorie);
+	
+	Produit findByReference(long reference);
 }
